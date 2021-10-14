@@ -11,6 +11,7 @@ public class Pelicula {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idPelicula;
 
+
     @Column(length = 20)
     private String nombre;
 
