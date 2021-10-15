@@ -11,7 +11,6 @@ public class Pelicula {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idPelicula;
 
-
     @Column(length = 20)
     private String nombre;
 
@@ -24,5 +23,46 @@ public class Pelicula {
     @ManyToOne
     @JoinColumn(name="idEstudio")
     private Estudio estudio;
+
+    public Integer getIdPelicula() {
+        return idPelicula;
+    }
+
+    public void setIdPelicula(Integer idPelicula) {
+        this.idPelicula = idPelicula;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Integer getAnio() {
+        return anio;
+    }
+
+    public void setAnio(Integer anio) {
+        this.anio = anio;
+    }
+
+    public Date getFechaLanzamiento() {
+        return fechaLanzamiento;
+    }
+
+    public void setFechaLanzamiento(Date fechaLanzamiento) {
+        this.fechaLanzamiento = fechaLanzamiento;
+    }
+
+    public Estudio getEstudio() {
+        return estudio;
+    }
+
+    public void setEstudio(Estudio estudio) {
+        this.estudio = estudio;
+    }
+
 
 }
