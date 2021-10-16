@@ -17,5 +17,8 @@ public class PeliculaRepository {
         return (List<Pelicula>) peliculaCrudRepository.findAll();
     }
 
+    public Pelicula crearPelicula(Pelicula pelicula) {
+        return peliculaCrudRepository.save(pelicula);
+    }
 
 }

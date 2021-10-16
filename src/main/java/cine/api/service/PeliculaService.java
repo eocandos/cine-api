@@ -17,4 +17,8 @@ public class PeliculaService {
        return peliculaRepository.obtenerPeliculas();
     }
 
+    public Pelicula crearPelicula(Pelicula pelicula) {
+        return peliculaRepository.crearPelicula(pelicula);
+    }
+
 }

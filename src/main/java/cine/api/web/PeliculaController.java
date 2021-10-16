@@ -3,9 +3,8 @@ package cine.api.web;
 import cine.api.model.Pelicula;
 import cine.api.service.PeliculaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,6 +18,13 @@ public class PeliculaController {
     @GetMapping("/todas")
     public List<Pelicula> getPeliculas() {
         return peliculaService.obtenerPeliculas();
+    }
+
+    @PostMapping("/guardar")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Pelicula crearPelicula(@RequestBody Pelicula pelicula){
+
+        return peliculaService.crearPelicula(pelicula);
     }
 
 }

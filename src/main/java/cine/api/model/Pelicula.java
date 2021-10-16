@@ -15,9 +15,6 @@ public class Pelicula {
     private String nombre;
 
     @Column
-    private Integer anio;
-
-    @Column
     private Date fechaLanzamiento;
 
     @ManyToOne
@@ -38,14 +35,6 @@ public class Pelicula {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public Integer getAnio() {
-        return anio;
-    }
-
-    public void setAnio(Integer anio) {
-        this.anio = anio;
     }
 
     public Date getFechaLanzamiento() {
